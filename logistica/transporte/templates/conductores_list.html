@@ -1,0 +1,26 @@
+{% extends "logistica/base.html" %}
+{% block title %}Agregar Conductor{% endblock %}
+{% block content %}
+
+<h1 class="mb-4">Agregar Conductor</h1>
+
+<form class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input class="form-control" type="text">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Licencia</label>
+        <input class="form-control" type="text">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Teléfono</label>
+        <input class="form-control" type="text">
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+</form>
+
+{% endblock %}

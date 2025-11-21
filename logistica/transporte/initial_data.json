@@ -1,0 +1,207 @@
+[
+  {
+    "model": "transporte.vehiculo",
+    "pk": 1,
+    "fields": {
+      "patente": "ABCD12",
+      "marca": "Mercedes-Benz",
+      "modelo": "Actros",
+      "anio": 2019,
+      "capacidad_kg": "18000.00",
+      "tipo": "CAMION",
+      "activo": true
+    }
+  },
+  {
+    "model": "transporte.vehiculo",
+    "pk": 2,
+    "fields": {
+      "patente": "XYZA89",
+      "marca": "Volvo",
+      "modelo": "FH16",
+      "anio": 2021,
+      "capacidad_kg": "20000.00",
+      "tipo": "CAMION",
+      "activo": true
+    }
+  },
+
+{
+    "model": "transporte.aeronave",
+    "pk": 1,
+    "fields": {
+      "matricula": "CC-A123",
+      "fabricante": "Cessna",
+      "modelo": "208 Caravan",
+      "anio": 2015,
+      "capacidad_kg": "3000.00",
+      "tipo": "AVION",
+      "activo": true
+    }
+  },
+  {
+    "model": "transporte.aeronave",
+    "pk": 2,
+    "fields": {
+      "matricula": "CC-B982",
+      "fabricante": "Beechcraft",
+      "modelo": "1900D",
+      "anio": 2018,
+      "capacidad_kg": "3500.00",
+      "tipo": "AVION",
+      "activo": true
+    }
+  },
+
+  {
+    "model": "transporte.conductor",
+    "pk": 1,
+    "fields": {
+      "rut": "12.345.678-9",
+      "nombre": "Luis García",
+      "licencia": "A5",
+      "telefono": "+56998765432",
+      "activo": true
+    }
+  },
+  {
+    "model": "transporte.conductor",
+    "pk": 2,
+    "fields": {
+      "rut": "22.334.556-7",
+      "nombre": "Carla Muñoz",
+      "licencia": "A2",
+      "telefono": "+56987654321",
+      "activo": true
+    }
+  },
+
+  {
+    "model": "transporte.piloto",
+    "pk": 1,
+    "fields": {
+      "rut": "15.654.321-0",
+      "nombre": "Marco Rivas",
+      "certificacion": "IFR",
+      "horas_vuelo": 3500,
+      "activo": true
+    }
+  },
+  {
+    "model": "transporte.piloto",
+    "pk": 2,
+    "fields": {
+      "rut": "18.222.444-5",
+      "nombre": "Fernanda Ortiz",
+      "certificacion": "VFR",
+      "horas_vuelo": 2100,
+      "activo": true
+    }
+  },
+
+  {
+    "model": "transporte.cliente",
+    "pk": 1,
+    "fields": {
+      "nombre": "Empresa Minera Norte",
+      "rut": "76.112.334-5",
+      "direccion": "Av. Los Industriales 2040",
+      "telefono": "+56223334444",
+      "email": "contacto@mineranorte.cl",
+      "activo": true
+    }
+  },
+  {
+    "model": "transporte.cliente",
+    "pk": 2,
+    "fields": {
+      "nombre": "Importadora Sur",
+      "rut": "79.882.567-1",
+      "direccion": "Calle Central 6542",
+      "telefono": "+56222446688",
+      "email": "ventas@importadorasur.cl",
+      "activo": true
+    }
+  },
+
+  {
+    "model": "transporte.ruta",
+    "pk": 1,
+    "fields": {
+      "origen": "Santiago",
+      "destino": "Valparaíso",
+      "tipo_transporte": "TERRESTRE",
+      "distancia_km": "115.50",
+      "duracion_estimada_horas": "2.00",
+      "activo": true
+    }
+  },
+  {
+    "model": "transporte.ruta",
+    "pk": 2,
+    "fields": {
+      "origen": "Santiago",
+      "destino": "Antofagasta",
+      "tipo_transporte": "AEREO",
+      "distancia_km": "1368.00",
+      "duracion_estimada_horas": "2.40",
+      "activo": true
+    }
+  },
+
+  {
+    "model": "transporte.carga",
+    "pk": 1,
+    "fields": {
+      "descripcion": "Repuestos industriales",
+      "peso_kg": "1500.00",
+      "tipo": "GENERAL",
+      "valor_declarado": "12000000.00",
+      "cliente": 1
+    }
+  },
+  {
+    "model": "transporte.carga",
+    "pk": 2,
+    "fields": {
+      "descripcion": "Equipos electrónicos",
+      "peso_kg": "900.00",
+      "tipo": "FRAGIL",
+      "valor_declarado": "8000000.00",
+      "cliente": 2
+    }
+  },
+
+  {
+    "model": "transporte.despacho",
+    "pk": 1,
+    "fields": {
+      "codigo": "DSP001",
+      "fecha": "2025-11-20",
+      "ruta": 1,
+      "vehiculo": 1,
+      "aeronave": null,
+      "conductor": 1,
+      "piloto": null,
+      "carga": 1,
+      "estado": "PENDIENTE",
+      "observaciones": "Salida programada a las 08:00"
+    }
+  },
+  {
+    "model": "transporte.despacho",
+    "pk": 2,
+    "fields": {
+      "codigo": "DSP002",
+      "fecha": "2025-11-21",
+      "ruta": 2,
+      "vehiculo": null,
+      "aeronave": 1,
+      "conductor": null,
+      "piloto": 1,
+      "carga": 2,
+      "estado": "EN_RUTA",
+      "observaciones": "En vuelo hacia Antofagasta"
+    }
+  }
+]

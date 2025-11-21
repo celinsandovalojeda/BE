@@ -1,0 +1,24 @@
+{% extends "logistica/base.html" %}
+{% block title %}Eliminar Vehículo{% endblock %}
+
+{% block content %}
+<h1 class="text-danger">Eliminar Vehículo</h1>
+
+<p>¿Seguro que deseas eliminar este vehículo?</p>
+
+<button class="btn btn-danger" id="btnEliminar">Eliminar</button>
+<a href="/vehiculos/" class="btn btn-secondary">Cancelar</a>
+
+<script>
+let vehiculoId = "{{ id }}";
+
+document.getElementById("btnEliminar").addEventListener("click", function() {
+    fetch(`/api/vehiculos/${vehiculoId}/`, {
+        method: "DELETE"
+    }).then(() => {
+        window.location.href = "/vehiculos/";
+    });
+});
+</script>
+
+{% endblock %}

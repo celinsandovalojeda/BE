@@ -1,0 +1,38 @@
+{% extends "logistica/base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Panel de Control</h1>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Vehículos</h5>
+                <p class="card-text">Gestiona los vehículos del sistema.</p>
+                <a class="btn btn-primary" href="/vehiculos/">Ver Vehículos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Conductores</h5>
+                <p class="card-text">Registro y control de conductores.</p>
+                <a class="btn btn-success" href="/conductores/">Ver Conductores</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">Rutas</h5>
+                <p class="card-text">Planificación y asignación de rutas.</p>
+                <a class="btn btn-warning" href="/rutas/">Ver Rutas</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
