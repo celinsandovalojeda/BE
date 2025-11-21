@@ -1,0 +1,29 @@
+{% extends "logistica/base.html" %}
+{% block title %}Crear Ruta{% endblock %}
+{% block content %}
+
+<h1 class="mb-4">Crear Ruta</h1>
+
+<form class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label class="form-label">Nombre Ruta</label>
+        <input class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Destino</label>
+        <input class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        <select class="form-select">
+            <option>Activa</option>
+            <option>Inactiva</option>
+        </select>
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+</form>
+
+{% endblock %}

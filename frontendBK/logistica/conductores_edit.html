@@ -1,0 +1,26 @@
+{% extends "logistica/base.html" %}
+{% block title %}Editar Conductor{% endblock %}
+{% block content %}
+
+<h1 class="mb-4">Editar Conductor</h1>
+
+<form class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input class="form-control" id="nombre">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Licencia</label>
+        <input class="form-control" id="licencia">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Teléfono</label>
+        <input class="form-control" id="telefono">
+    </div>
+
+    <button class="btn btn-primary">Actualizar</button>
+</form>
+
+{% endblock %}
